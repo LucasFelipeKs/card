@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, blue, #18ADF0, #24FFBB, white);
+    background-size: 250% 250%;
+    animation: cores-andando 10s ease infinite;
+}
+
+@keyframes cores-andando{
+    0% {
+        background-position:0% 50%;
+    }
+
+    50% {
+        background-position:100% 50%;
+}
+
+    100%{
+        background-position:0% 50% ;
+    }
+}
+
+
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.img-card {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 869px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .img-card {
+    height: 250px;
+    width: 250px;
+}
+
+.img-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .conteudo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .conteudo .detalhes { 
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.card:hover .conteudo .detalhes {
+    transform: translateY(0px);
+}
+
+.card .conteudo .detalhes h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+    font-family: sans-serif;
+}
+
+.card .conteudo .detalhes h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+    font-family: sans-serif;
+}
+
+.card .conteudo .detalhes .redes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .conteudo .detalhes .redes img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.card .conteudo .detalhes .redes .botao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .conteudo .detalhes .botao button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgb(52, 243, 52);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.card .conteudo .detalhes .botao button a{
+    text-decoration: none;
+    color: white;
+}
+
+.card .conteudo .detalhes .botao button:nth-child(2){
+    border: 1px solid #999;
+    color: black;
+    background: rgb(78, 78, 252);
+}
